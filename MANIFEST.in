@@ -1,0 +1,6 @@
+include LICENSE README.md PROJECT_STRUCTURE.md CONTRIBUTING.md SECURITY.md requirements*.txt
+recursive-include docs *.md
+recursive-include deploy *.sh *.py *.txt
+recursive-include scripts *.sh
+recursive-include tests *.py
+recursive-include eval *.py *.json *.md
