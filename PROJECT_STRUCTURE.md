@@ -21,3 +21,5 @@ No model weights or runtime traces are checked in. The walkthrough video is incl
 ## Public release
 
 This repository is assembled from reviewed project files using separate commits. It excludes private hosting bundles, account-specific provisioning, credentials, local workspace paths, operational resource inventories and local activity history. Changes to the public project should be made in this checkout.
+
+Validation before publication: 389 tests passed, 2 external live tests skipped. Python source and wheel builds succeeded. The prepared public files were scanned for credentials, private hosting identifiers and local paths.
