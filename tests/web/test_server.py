@@ -408,3 +408,15 @@ async def test_health_requires_real_backend(client, runtime):
 async def test_deployment_notice_is_returned(client, monkeypatch):
     monkeypatch.setenv("HOMEDEMO_DEPLOYMENT_NOTICE", "Hosted on AWS; simulated sensors.")
     assert (await client.get("/api/state")).json()["deployment"]["notice"] == "Hosted on AWS; simulated sensors."
+
+
+async def test_welcome_page_links_to_video_and_live_demo(client):
+    response = await client.get('/')
+    assert response.status_code == 200
+    assert '/demo?present=1' in response.text
+    assert '/static/assets/welcome/unspoken.mp4' in response.text
+    assert 'static/app.js' not in response.text
+    response = await client.get('/static/assets/welcome/unspoken.mp4', headers={'Range': 'bytes=0-1023'})
+    assert response.status_code == 206
+    assert response.headers['content-type'] == 'video/mp4'
+    assert len(response.content) == 1024

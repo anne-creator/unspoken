@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5f3eb">
+<meta name="description" content="Meet Unspoken: a smart home that understands context, without a wake word. Watch the walkthrough, then explore the live demo.">
+<title>Welcome to Unspoken · Watch & explore</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/static/welcome.css">
+<script src="/static/welcome.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#walkthrough">Skip to the walkthrough</a>
+<div class="page">
+<header class="header">
+  <a class="brand" href="/" aria-label="Unspoken home"><span class="brand-mark" aria-hidden="true">u.</span>unspoken <span class="brand-zh" lang="zh-Hans">默契</span></a>
+  <span class="header-note">A smart home, with a little understanding.</span>
+</header>
+<main>
+  <section class="intro" aria-labelledby="welcome-title">
+    <div>
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span> WELCOME, JUDGES</p>
+      <h1 id="welcome-title">No wake word.<br><span>Just understanding.</span></h1>
+    </div>
+    <p class="intro-copy">Meet a home that listens for meaning.<br>Watch the short walkthrough, then try the live demo for yourself.</p>
+  </section>
+  <section class="watch" id="walkthrough" aria-labelledby="video-heading">
+    <div class="section-label"><h2 id="video-heading"><span>01</span> Watch the walkthrough</h2><span class="duration">2 min 58 sec · sound on</span></div>
+    <div class="video-shell">
+      <video id="walkthrough-video" controls playsinline preload="metadata" poster="/static/assets/welcome/poster.jpg" aria-label="Unspoken smart-home walkthrough" aria-describedby="video-description">
+        <source src="/static/assets/welcome/unspoken.mp4" type="video/mp4">
+        Your browser does not support embedded video. <a href="/static/assets/welcome/unspoken.mp4">Watch the MP4 walkthrough.</a>
+      </video>
+      <button id="play-video" class="play-video" type="button" aria-label="Play the Unspoken walkthrough" hidden><span class="play-circle" aria-hidden="true">▶</span><span>Meet Unspoken</span></button>
+    </div>
+    <p id="video-description" class="video-description">An inside look at how everyday words become thoughtful actions.</p>
+    <p id="video-status" class="video-status" role="status" aria-live="polite"></p>
+  </section>
+  <section class="try" aria-labelledby="demo-heading">
+    <div class="try-copy">
+      <p class="step">02 / YOUR TURN</p>
+      <h2 id="demo-heading">Step inside the home.</h2>
+      <p>Run a scenario, say something, and see how the house decides.</p>
+    </div>
+    <a class="launch" href="/demo?present=1">Launch live demo <span aria-hidden="true">↗</span></a>
+  </section>
+</main>
+<footer><span>Created by Anne · Simulated home. Real model decisions.</span><span>Powered by Strands Decider 2B + Claude Haiku</span></footer>
+</div>
+</body>
+</html>

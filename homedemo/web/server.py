@@ -170,6 +170,10 @@ def create_app(runtime: RuntimeAPI) -> FastAPI:
     home: dict[str, Any] = getattr(runtime, "home", None) or load_home()
 
     @app.get("/", include_in_schema=False)
+    async def index() -> FileResponse:
+        return FileResponse(STATIC_DIR / "welcome.html", media_type="text/html",
+                            headers={"Cache-Control": "no-store"})
+
     @app.get("/demo", include_in_schema=False)
     async def demo() -> FileResponse:
         return FileResponse(STATIC_DIR / "index.html", media_type="text/html",
