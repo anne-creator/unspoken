@@ -23,3 +23,7 @@ No model weights or runtime traces are checked in. The walkthrough video is incl
 This repository is assembled from reviewed project files using separate commits. It excludes private hosting bundles, account-specific provisioning, credentials, local workspace paths, operational resource inventories and local activity history. Changes to the public project should be made in this checkout.
 
 Validation before publication: 389 tests passed, 2 external live tests skipped. Python source and wheel builds succeeded. The prepared public files were scanned for credentials, private hosting identifiers and local paths.
+
+## Judge-facing presentation review
+
+The welcome page now identifies the tool-selection pattern, points directly to the reusable recipe and public source, and explains how to start the tour. Presenter mode stacks the home, scoreboard and decision X-ray below 980px, keeps scenario controls readable, and uses a viewport-aware desktop layout so the deployment notice cannot hide the scoreboard. Changed stylesheets use content-based URL versions to update existing visitors. Validation: 41 web tests passed; narrow-screen and desktop layouts checked in browsers. Only explicit external navigation links are allowed by the offline-resource check; remote runtime resources remain disallowed.

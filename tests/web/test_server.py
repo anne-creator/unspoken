@@ -69,6 +69,9 @@ def test_static_files_work_offline():
     assert {f.name for f in files} >= {"index.html", "app.js", "style.css", "main.js", "scene.css"}
     for f in files:
         text = f.read_text(encoding="utf-8")
+        # External anchors are explicit navigation, not runtime resource downloads.
+        if f.suffix == ".html":
+            text = re.sub(r'<a\b[^>]*>', '', text, flags=re.IGNORECASE)
         assert not re.search(r"https?://", text), f"{f.relative_to(STATIC)} references a remote URL"
         assert "<script src=\"http" not in text and "@import" not in text
 
