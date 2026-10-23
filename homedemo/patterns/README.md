@@ -1,9 +1,9 @@
 # Pattern: Decider tool router (`#tool-selection`)
 
 A Strands agent whose **tool is picked by the Strands Decider 2B before the LLM is ever called**. The
-2B runs on the device (here: the home hub, CPU); when it is sure, the LLM is skipped: 0 tokens, nothing
-leaves the house. When it is unsure, the normal model (Claude Haiku 4.5 on Amazon Bedrock) decides with
-the same tools. The LLM becomes the fallback, not the first call.
+2B runs where you host its model server. In the public demo that is an EC2 server; it can also run
+on a local hub. When it is sure, the Bedrock model call is skipped (0 generative-model tokens).
+When it is unsure, Claude Haiku 4.5 on Amazon Bedrock decides with the same tools. The LLM becomes the fallback, not the first call.
 
 ```
 user text ──► DeciderToolRouter.before_invocation ──► Decider 2B (one typed request)

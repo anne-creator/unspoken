@@ -27,3 +27,5 @@ Validation before publication: 389 tests passed, 2 external live tests skipped. 
 ## Judge-facing presentation review
 
 The welcome page now identifies the tool-selection pattern, points directly to the reusable recipe and public source, and explains how to start the tour. Presenter mode stacks the home, scoreboard and decision X-ray below 980px, keeps scenario controls readable, and uses a viewport-aware desktop layout so the deployment notice cannot hide the scoreboard. Changed stylesheets use content-based URL versions to update existing visitors. Validation: 41 web tests passed; narrow-screen and desktop layouts checked in browsers. Only explicit external navigation links are allowed by the offline-resource check; remote runtime resources remain disallowed.
+
+The README now declares tool selection explicitly and links to the reusable typed-question recipe and standalone example. The recipe distinguishes locally hosted inference from the EC2-hosted demo so its privacy description matches the actual deployment.

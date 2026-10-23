@@ -10,6 +10,10 @@ Unspoken is an interactive smart-home simulation. A real Strands Decider 2B inte
 
 Start at the welcome page to watch the [three-minute walkthrough](homedemo/web/static/assets/welcome/unspoken.mp4), then choose **Launch live demo**. The interactive page offers a 3D home, scenarios, a simulated phone, and an X-ray of each model decision.
 
+## Hackathon decision pattern
+
+**Tool selection** (`#strands-decider-2b` + `#tool-selection`): the 2B selects a household action/tool from the current input. Its confidence controls whether the Strands agent proceeds to Haiku. The [reusable recipe](homedemo/patterns/README.md) includes the typed question, option set, intervention wiring and usage instructions; the [standalone example](homedemo/patterns/example_assistant.py) shows the pattern outside the home simulation.
+
 ## Try it locally
 
 Python 3.11 or newer is required. Python 3.12 is used for the deployment scripts.
